@@ -145,7 +145,6 @@ float calculoSegundaSimpson(int subIntervalos, float a, float b){
 	vetorX[0] = a;
 	for (int i = 1; i<=TAM; i++){
 		vetorX[i] = vetorX[i-1]+h;
-		
 	}
 	vetorX[subIntervalos] = b;
 
