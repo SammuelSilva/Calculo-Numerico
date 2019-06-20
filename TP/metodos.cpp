@@ -140,17 +140,25 @@ float calculoSegundaSimpson(int subIntervalos, float a, float b){
 	//DISTANCIA ENTRE OS VALORES DE X
  	h = (b-(a))/subIntervalos;
 
- 	//VETOR DOS VALORES DE X E CI
-	vetorX[0] = a; 
-	vetorCI[0] = 1; 
+ 	
+ 	//VETOR DOS VALORES DE X
+	vetorX[0] = a;
 	for (int i = 1; i<=TAM; i++){
 		vetorX[i] = vetorX[i-1]+h;
-		vetorCI[i] = 3;
+		
 	}
 	vetorX[subIntervalos] = b;
+
+	//VETOR DOS VALORES DE CI
+	vetorCI[0] = 1; 
+	for (int i = 1; i<=TAM; i++){
+		vetorCI[i] = 3;
+	}
+	for (int i = 3; i<=TAM; i=i+3){
+		vetorCI[i] = 2;
+	}
 	vetorCI[subIntervalos] = 1;
 	
-
 	// FUNÇOES QUE USEI PARA TESTE
 	//1/vetorX[i] - 1/x	
 	//VETOR DOS VALORES DE Y
