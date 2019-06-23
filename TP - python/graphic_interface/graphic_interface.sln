@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "graphic_interface", "graphic_interface.pyproj", "{A8CCBA84-D254-4F71-8BBA-FE37B3CD0AFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8CCBA84-D254-4F71-8BBA-FE37B3CD0AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CCBA84-D254-4F71-8BBA-FE37B3CD0AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF0C33F0-3185-4483-9FA9-D9F4508488B0}
+	EndGlobalSection
+EndGlobal
