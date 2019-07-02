@@ -8,12 +8,12 @@
 # Side – Define em que lado o widget se posicionará (Left, Right, Top, Bottom).
 # Frame(master) - Janela de aplicação
 
+import metodos
 from tkinter import *
-from math import *
 #defines
 
-HEIGHT  = 700
-WIDTH   = 800
+HEIGHT  = 500
+WIDTH   = 600
 aux     = -1;
 
 #end
@@ -22,8 +22,18 @@ aux     = -1;
 
 def get_equations(entry):
     x = A.get()
-    var_answer.set(eval(entry))
-    answer()
+    if option.get() == 0:
+        var_answer.set(metodos.calculoTrapezio(entry, M.get(), A.get(), B.get()))
+        answer()
+    elif option.get() == 1:
+        var_answer.set(metodos.calculoPrimeiraSimpson(entry, M.get(), A.get(), B.get()))
+        answer()
+    elif option.get() == 2:
+        var_answer.set(metodos.calculoSegundaSimpson(entry, M.get(), A.get(), B.get()))
+        answer()
+    else:
+        label_answer = Label(answer_frame, text = "Missing Data "+ str (A.get()), bg = '#031636', font = "system 16 bold", fg = 'white')
+        label_answer.place(relx = 0.5, rely = 0.5, relwidth = 0.4, relheight = 0.2, anchor = 'n')
 
 def answer():  
     label_answer = Label(answer_frame, text = "For the lower limit equals to: "+ str (A.get()), bg = '#031636', font = "system 16 bold", fg = 'white')
@@ -54,7 +64,7 @@ root = Tk()
  
 A          = DoubleVar()
 B          = DoubleVar()
-M          = DoubleVar()
+M          = IntVar()
 var_answer = DoubleVar()
 
 #Canvas layer and Background
